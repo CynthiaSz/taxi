@@ -1,0 +1,148 @@
+h1 {
+	color: blue;
+	text-align: center;
+	margin-top: 10%;
+}
+
+/* here is the magic */
+.boxes input[type="radio"], .boxes form {display:none;}
+.boxes input[type="radio"]:checked ~ form {display:block;}
+
+/* some eye-candy */
+body {
+	margin:0;
+}
+* {
+	box-sizing: border-box;
+}
+nav {
+  position:fixed;
+  z-index:2;
+  top:0;
+  width: 100%;
+  background: #222 linear-gradient(to bottom, #444,#222);
+  color: #DDD;
+  text-align:right;
+}
+nav>*, .box form>label[for="none"] {
+  display:inline-block;
+  padding:0 20px;
+  font-size:120%;
+  line-height:40px;
+  text-transform: uppercase;
+  font-family:sans-serif;
+  cursor:pointer;
+}
+nav>*:hover, .box form>label[for="none"]:hover {
+  background: hsla(0,0%,100%,0.1);
+}
+nav>*:active {
+  background: linear-gradient(to top, #444,#222);
+}
+nav>label a{
+	text-decoration: none;
+	color: #DDD;
+}
+
+.box form {
+  position:fixed;
+  top:40px;
+  right:0;
+  width:300px;
+  background:#222;
+  padding:10px;
+  padding-top:0px;
+  box-shadow: 0px 0px 8px 4px #444;
+}
+.box form>input {
+  display:block;
+  width: calc(100% - 20px);
+  margin:10px;
+}
+.box form>label[for="none"] {
+  position:fixed;
+  top:40px;
+  right:0;
+  color: #DDD
+}
+.box h3{
+  color:#DDD;
+  text-align:center;
+  padding:0 20px;
+  margin:0;
+  font-size:120%;
+  line-height:40px;
+  text-transform: uppercase;
+  font-family:sans-serif;
+}
+.fond {
+	background-image: url(img/californie.jpg);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size: cover;
+}
+
+footer {
+	margin-top: 80%;
+}
+
+.contact {
+	margin-top: 15%;
+}
+
+p {
+  margin-top: 0px;
+}
+ 
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+ 
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+ 
+.champs {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+ 
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+ 
+input:focus {
+  background: #eaeaea;
+}
+ 
+input, textarea {
+  width: 249px;
+}
+ 
+textarea {
+  height: 100px;
+}
+ 
+select {
+  width: 254px;
+}
+ 
+input[type=checkbox] {
+  width: 10px;
+}
+ 
+input[type=submit] {
+  width: 150px;
+  padding: 10px;
+}
+.retour {
+	margin-left: 2%;
+}
