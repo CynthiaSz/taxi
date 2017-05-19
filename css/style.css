@@ -1,29 +1,59 @@
 h1 {
-	color: blue;
+	color: black;
 	text-align: center;
 	margin-top: 10%;
+  font-size: xx-large;
 }
 
-/* here is the magic */
-.boxes input[type="radio"], .boxes form {display:none;}
-.boxes input[type="radio"]:checked ~ form {display:block;}
+.résa {
+  margin-top: 10%;
+}
 
-/* some eye-candy */
+.qui {
+  background-color: rgba(255,255,255,0.4);
+  margin-top: 10%;
+  margin-right: 50%;
+  font-size: large;
+}
+
 body {
 	margin:0;
+  height: 50px;
+  width: 1500px;
 }
+
+.valider {
+  background-color: rgba(255,255,255,0.4);
+}
+
+/*si pas activé*/
+.box input[type="radio"], .box form {
+  display:none;
+}
+
+/*quand la box est validée*/
+.box input[type="radio"]:checked ~ form {
+  display:block;
+}
+
+
+/*Les bordures et les paddings ne seront plus élargis pour tous les éléments*/
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+/*pour la barre de menu*/
 nav {
   position:fixed;
   z-index:2;
   top:0;
   width: 100%;
-  background: #222 linear-gradient(to bottom, #444,#222);
-  color: #DDD;
+  background: rgb(34,34,34) linear-gradient(to bottom, rgb(68,68,68),rgb(34,34,34));/*gris foncé, gris*/
+  color: rgb(221,221,221);/*gris pâle*/
   text-align:right;
 }
+
+/*pour tous les enfants de nav, les noms des éléments des formulaires*/
 nav>*, .box form>label[for="none"] {
   display:inline-block;
   padding:0 20px;
@@ -33,40 +63,47 @@ nav>*, .box form>label[for="none"] {
   font-family:sans-serif;
   cursor:pointer;
 }
+
+/*au passage de la souris, sur tous les enfants de nav, les noms des éléments des formulaires*/
 nav>*:hover, .box form>label[for="none"]:hover {
   background: hsla(0,0%,100%,0.1);
 }
+
+/*au clic*/
 nav>*:active {
-  background: linear-gradient(to top, #444,#222);
-}
-nav>label a{
-	text-decoration: none;
-	color: #DDD;
+  background: linear-gradient(to top, rgb(68,68,68),rgb(34,34,34));
 }
 
+/*la partie formulaire des box*/
 .box form {
   position:fixed;
   top:40px;
   right:0;
   width:300px;
-  background:#222;
+  background:rgb(34,34,34);
   padding:10px;
   padding-top:0px;
-  box-shadow: 0px 0px 8px 4px #444;
+  box-shadow: 0px 0px 8px 4px rgb(68,68,68);
 }
+
+/*les inputs des formulaires*/
 .box form>input {
   display:block;
   width: calc(100% - 20px);
   margin:10px;
 }
+
+/*les noms des formulaires*/
 .box form>label[for="none"] {
   position:fixed;
   top:40px;
   right:0;
-  color: #DDD
+  color: rgb(221,221,221);
 }
+
+/*les titres des box*/
 .box h3{
-  color:#DDD;
+  color:rgb(221,221,221);
   text-align:center;
   padding:0 20px;
   margin:0;
@@ -74,6 +111,17 @@ nav>label a{
   line-height:40px;
   text-transform: uppercase;
   font-family:sans-serif;
+}
+
+.champ {
+  color: white;
+  margin-left: 3%;
+}
+.civi {
+  margin-left: -7%;
+}
+select {
+  margin-left: 3%;
 }
 .fond {
 	background-image: url(img/californie.jpg);
@@ -85,10 +133,12 @@ nav>label a{
 
 footer {
 	margin-top: 80%;
+  background-color: rgba(255,255,255,0.4);
 }
 
 .contact {
-	margin-top: 15%;
+	margin-top: 60%;
+  background-color: rgba(255,255,255,0.4);
 }
 
 p {
