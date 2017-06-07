@@ -1,6 +1,8 @@
+<?php include 'header.php' ?>
+
 <div class="contact">
     <h4>S'enregistrer</h4>
-      <form action="register_post.php" method="post">
+      <form action="register_post.php" method="get">
           <label class="champs" for="login">Identifiant<em>*</em></label>
           <input name="login" required=""><br>
           <label class="champs" for="password">Mot de passe<em>*</em></label>
@@ -12,8 +14,8 @@
           <legend>Informations personnelles</legend>
 
           <label class="champs" for="civilite">Civilité<em>*</em></label>
-          <input class="civi" type=radio name=civilite id=civilite>Mr
-          <input class="civi" type=radio name=civilite id=civilite>Mme<br>
+          <input class="civi1" type="radio" name="civilite" id="civilite">Mr
+          <input class="civi2" type="radio" name="civilite" id="civilite">Mme<br>
             <!-- //placeholder: indication grisée 
             //required: il faut renseigner le champs sinon la validation est bloquée
             //autofocus: le curseur est positionné dans cette case au chargement de la page -->
